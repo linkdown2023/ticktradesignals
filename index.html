@@ -222,6 +222,62 @@
     .disclaimer strong {
       color: #e8c56a;
     }
+
+/* === FAQ STYLING === */
+.faq-container {
+  margin-top: 25px;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 18px 0;
+}
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--navy-deep);
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px;
+  transition: color 0.3s ease;
+}
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.3em;
+  color: var(--gold-primary);
+  transition: transform 0.3s ease, content 0.3s ease;
+}
+.faq-item.active .faq-question::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+.faq-question:hover {
+  color: var(--gold-primary);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 0.95em;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: max-height 0.4s ease, margin-top 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+.faq-item.active .faq-answer {
+  margin-top: 10px;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
   </style>
 </head>
 <body>
@@ -282,14 +338,16 @@
       </svg>
     </div>
     <h1>Tick Trade Signals</h1>
-    <p>Smart. Transparent. Educational Forex Analysis.</p>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#signals">Free Signals</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Smart. Transparent. Real Market Logic.</p>
+   <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#signals">Free Signals</a>
+  <a href="#education">Education</a>
+  <a href="#faq">FAQ</a> <!-- ✅ Added this -->
+  <a href="#contact">Contact</a>
+</nav>
+
   </header>
 
   <section id="home" style="
@@ -337,7 +395,7 @@
       <div style="text-align:left; padding-left:14px;">
         <p style="font-weight:700; font-size:1.1em; color:#10b981; margin-bottom:4px;">Zero Guesswork</p>
         <p style="font-size:1em; line-height:1.6; margin:0; color:#0f172a;">
-          Engineered with <strong>1:2R+ logic</strong>,<br>
+          Engineered with <strong> at least 1:2R+ logic</strong>,<br>
           <strong>live-verified</strong> — dropped <strong>daily, 100% free</strong>. 📊🔥
         </p>
       </div>
@@ -418,6 +476,109 @@
 </section>
 
 
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p style="margin-bottom: 20px; color: var(--text-muted);">
+    Here are some of the most common questions about our signals, trading approach, and philosophy.
+  </p>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">❓ Do you provide pending order signals?</button>
+      <div class="faq-answer">
+        ✅ Yes — all our trades are shared as <strong>pending orders</strong>, not random “buy/sell now” calls.
+        We don’t send fake signals like many channels do. Each setup includes <strong>entry, stop loss (SL),
+        and take profit (TP)</strong> for disciplined execution.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">📊 What pairs or markets do you trade?</button>
+      <div class="faq-answer">
+        Our main focus is <strong>GOLD (XAU/USD)</strong> and <strong>USDJPY</strong> — our best performing pairs.
+        We also provide other <strong>forex</strong> and <strong>indices</strong> signals depending on market
+        conditions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">⚙️ How are your signals created?</button>
+      <div class="faq-answer">
+        Each signal is built on <strong>price action, market structure, and confluence</strong> — then manually
+        verified for accuracy and logic before being shared.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">🎯 What makes Tick Trade Signals different?</button>
+      <div class="faq-answer">
+        We don’t just say “Buy/Sell Now.” We provide <strong>detailed pending setups</strong> with explanation,
+        risk logic, and full transparency — no hype, just results.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">💰 Can I copy trades directly?</button>
+      <div class="faq-answer">
+        Yes, you can — but we recommend learning the structure behind each setup. Our goal is to help you become
+        an independent, skilled trader.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">🧠 Do you teach trading?</button>
+      <div class="faq-answer">
+        Yes! Visit our <a href="#education" class="highlight">Education</a> section for lessons on
+        <strong>structure, risk, and mindset</strong>.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">📈 What’s your success rate?</button>
+      <div class="faq-answer">
+        We maintain roughly <strong>80–90% accuracy</strong>, focusing on quality setups and at least 1:2R+ risk/reward
+        structures.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">⚠️ Is trading risky?</button>
+      <div class="faq-answer">
+        Yes, trading always carries risk — but we help you manage it properly through <strong>discipline, logic,
+        and structured setups</strong>.
+      </div>
+    </div>
+
+<div class="faq-item">
+  <button class="faq-question">⏰ When do you send signals?</button>
+  <div class="faq-answer">
+    Let’s be honest — we don’t send random “get ready” or “market about to open/close” calls like many fake channels do.
+    All our setups are shared only after <strong>proper technical analysis</strong> confirms the setup.
+    Every signal is a <strong>pending order</strong>, not a gamble.
+    Most trades are sent during the <strong>London and US sessions</strong> when volatility and structure align best.
+  </div>
+</div>
+
+
+    <div class="faq-item">
+      <button class="faq-question">🤝 Do you offer mentorship or VIP services?</button>
+      <div class="faq-answer">
+        Currently, we provide free signals and educational content. Advanced mentorship will be available soon
+        for serious traders.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">📬 How can I join your community?</button>
+      <div class="faq-answer">
+        Join our official Telegram 👉 <a href="https://t.me/TickTradeSignals" target="_blank"
+        class="highlight">@TickTradeSignals</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section id="contact">
     <h2>Contact</h2>
     <p>Telegram: <a href="https://t.me/TickTradeSignals" target="_blank">@TickTradeSignals</a></p>
@@ -436,5 +597,16 @@
       <p>By using this service, you acknowledge that you are trading at your <strong>own risk</strong> and agree to conduct your own due diligence. <strong>Tick Trade Signals</strong> and its operators assume <strong>no liability</strong> for any financial loss or damage resulting from the use of this information.</p>
     </div>
   </footer>
+<script>
+  const faqs = document.querySelectorAll(".faq-question");
+  faqs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const parent = btn.parentElement;
+      parent.classList.toggle("active");
+    });
+  });
+</script>
+
+
 </body>
 </html>

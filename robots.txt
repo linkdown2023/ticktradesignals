@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ticktradesignals.com/sitemap.xml
